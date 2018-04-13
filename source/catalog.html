@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-navigation">
+        <a class="main-navigation__logo logo" href="index.html">
+          <img class="logo__image" src="#" alt="Мишка">
+        </a>
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">кнопка переключения меню</span>
+        </button>
+        <ul class="main-navigation__list site-navigation">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link">Каталог товаров</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-navigation__list user-navigation">
+          <li class="user-navigation__item">
+            <a class="user-navigation__link" href="#">
+              <svg class="user-navigation__svg" width = "18" height= "18">
+                <use xlink:href = "#"></use>
+              </svg>
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__link" href="#">
+              <svg class="user-navigation__svg" width = "21" height= "18">
+                <use xlink:href = "#"></use>
+              </svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="page-title">Каталог товаров</h1>
+      <section class="product">
+        <h2 class="visually-hidden">Список товаров</h2>
+        <ul class="product-list">
+          <li class="product__item product-item">
+            <a class="product-item__link" href="#">
+              <img class="product-item__image" src="#" alt="Зайчик-попрыгайчик">
+              <h3 class="product-item__title">Зайчик-попрыгайчик</h3>
+            </a>
+            <p class="product-item__description">Рост 30 см, вес 200 г</p>
+            <p class="product-item__price">1 200 руб.</p>
+            <svg class="product-item__svg" width = "21" height= "18">
+              <use xlink:href = "#"></use>
+            </svg>
+          </li>
+          <li class="product__item product-item">
+            <a class="product-item__link" href="#">
+              <img class="product-item__image" src="#" alt="Корзинка для белья">
+              <h3 class="product-item__title">Корзинка для белья</h3>
+            </a>
+            <p class="product-item__description">Диаметр 15 см, высота 10 см</p>
+            <p class="product-item__price">690 руб.</p>
+            <svg class="product-item__svg" width = "21" height= "18">
+              <use xlink:href = "#"></use>
+            </svg>
+          </li>
+          <li class="product__item product-item">
+            <a class="product-item__link" href="#">
+              <img class="product-item__image" src="#" alt="Большая корзинка для игрушек">
+              <h3 class="product-item__title">Большая корзинка для игрушек</h3>
+            </a>
+            <p class="product-item__description">Диаметр 30 см, высота 30 см</p>
+            <p class="product-item__price">1 500 руб.</p>
+            <svg class="product-item__svg" width = "21" height= "18">
+              <use xlink:href = "#"></use>
+            </svg>
+          </li>
+        </ul>
+      </section>
+      <section class="video-block">
+        <h2 class="video-block__title">Процесс производства</h2>
+        <div class="video-block__video video">
+          <button class="video__play-button" type="button">
+            <span class="visually-hidden">play</span>
+          </button>
+        </div>
+        <p class="video-block__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="video-block__button button">Сделать заказ</a>
+      </section>
+    </main>
+    <footer>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link_instagramm" href="#">
+            <span class="visually-hidden">Инстаграмм</span>
+            <svg class="social__svg" width = "22" height= "21">
+              <use xlink:href = "#"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social__link social__link_facebook" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg class="social__svg" width = "15" height= "28">
+              <use xlink:href = "#"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social__link social__link_twitter" href="#">
+            <span class="visually-hidden">Твиттер</span>
+            <svg class="social__svg" width = "23" height= "20">
+              <use xlink:href = "#"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright">
+        Разработано
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg class="copyright__svg" width = "27" height= "34">
+            <use xlink:href = "#"></use>
+          </svg>
+        </a>
+      </p>
+    </footer>
+    <section class="product-order">
+      <form class="product-order__form order-form" method="post" action="https://echo.htmlacademy.ru">
+        <h2 class="order-form__title">добавить в корзину</h2>
+        <fieldset class="order-form__fieldset size-fieldset">
+          <legend class="size-fieldset__legend">Выберете размер:</legend>
+          <input class="size-fieldset__input" id="size-s" type="radio" name="size" value="s">
+          <label class="size-fieldset__label" for="size-s">s</label>
+          <input class="size-fieldset__input" id="size-m" type="radio" name="size" value="m">
+          <label class="size-fieldset__label" for="size-m">m</label>
+          <input class="size-fieldset__input" id="size-l" type="radio" name="size" value="l">
+          <label class="size-fieldset__label" for="size-l">l</label>
+        </fieldset>
+        <button class="order-form__button button" type="submit">добавить</button>
+      </form>
+      <div class="product-order__overlay"></div>
+    </section>
+  </body>
+</html>
