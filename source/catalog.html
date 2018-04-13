@@ -10,8 +10,8 @@
         <a class="main-navigation__logo logo" href="index.html">
           <img class="logo__image" src="#" alt="Мишка">
         </a>
-        <button class="main-navigation__close-button" type="button">
-          <span class="visually-hidden">закрыть меню</span>
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">кнопка переключения меню</span>
         </button>
         <ul class="main-navigation__list site-navigation">
           <li class="site-navigation__item">
@@ -40,12 +40,9 @@
           </li>
         </ul>
       </nav>
-      <button class="main-navigation__open-button" type="button">
-        <span class="visually-hidden">открыть меню</span>
-      </button>
     </header>
     <main>
-      <h1 class="catalog-title">Каталог товаров</h1>
+      <h1 class="page-title">Каталог товаров</h1>
       <section class="product">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="product-list">
@@ -83,22 +80,6 @@
             </svg>
           </li>
         </ul>
-        <section class="week-product__modal product-order">
-          <form class="product-order__form order-form" method="post" action="https://echo.htmlacademy.ru">
-            <h2 class="order-form__title">добавить в корзину</h2>
-            <fieldset class="order-form__fieldset size-fieldset">
-              <legend class="size-fieldset__legend">Выберете размер:</legend>
-              <input class="size-fieldset__input" id="size-s" type="radio" name="size" value="s">
-              <label class="size-fieldset__label" for="size-s">s</label>
-              <input class="size-fieldset__input" id="size-m" type="radio" name="size" value="m">
-              <label class="size-fieldset__label" for="size-m">m</label>
-              <input class="size-fieldset__input" id="size-l" type="radio" name="size" value="l">
-              <label class="size-fieldset__label" for="size-l">l</label>
-            </fieldset>
-            <button class="order-form__button button" type="submit">добавить</button>
-          </form>
-          <div class="product-order__overlay"></div>
-        </section>
       </section>
       <section class="video-block">
         <h2 class="video-block__title">Процесс производства</h2>
@@ -148,5 +129,21 @@
         </a>
       </p>
     </footer>
+    <section class="product-order">
+      <form class="product-order__form order-form" method="post" action="https://echo.htmlacademy.ru">
+        <h2 class="order-form__title">добавить в корзину</h2>
+        <fieldset class="order-form__fieldset size-fieldset">
+          <legend class="size-fieldset__legend">Выберете размер:</legend>
+          <input class="size-fieldset__input" id="size-s" type="radio" name="size" value="s">
+          <label class="size-fieldset__label" for="size-s">s</label>
+          <input class="size-fieldset__input" id="size-m" type="radio" name="size" value="m">
+          <label class="size-fieldset__label" for="size-m">m</label>
+          <input class="size-fieldset__input" id="size-l" type="radio" name="size" value="l">
+          <label class="size-fieldset__label" for="size-l">l</label>
+        </fieldset>
+        <button class="order-form__button button" type="submit">добавить</button>
+      </form>
+      <div class="product-order__overlay"></div>
+    </section>
   </body>
 </html>
