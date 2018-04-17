@@ -1,0 +1,48 @@
+.size-fieldset {
+  display: flex;
+}
+
+.size-fieldset__legend {
+  margin-bottom: 28px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+  text-align: center;
+}
+
+.size-fieldset__label {
+  width: 82px;
+  margin-right: 7px;
+  padding: 18px 5px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+}
+
+.size-fieldset__input {
+  &:focus + .size-fieldset__label {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+    outline: 1px dashed  rgba(68, 68, 68, 0.3);
+  }
+
+  &:checked + .size-fieldset__label {
+    border: 2px solid #62d1ba;
+  }
+}
+
+.order-form__button {
+  width: 100%;
+  line-height: 16px;
+}

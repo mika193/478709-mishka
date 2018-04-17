@@ -1,0 +1,36 @@
+.email-fieldset {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 8px;
+}
+
+.email-fieldset__entry-field {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 9px 44px 18px 0;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
+  color: #444444;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &:hover + .email-fieldset__svg,
+  &:focus + .email-fieldset__svg {
+    fill: #62d1ba;
+  }
+
+  .placeholder;
+}
+
+.email-fieldset__svg {
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  fill: rgba(0, 0, 0, 0.2);
+}

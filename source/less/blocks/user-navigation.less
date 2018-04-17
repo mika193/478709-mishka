@@ -1,0 +1,48 @@
+.user-navigation {
+  .ul-style-none;
+}
+
+.user-navigation__item {
+  border-bottom: 1px solid #ececec;
+}
+
+.user-navigation__link {
+  position: relative;
+  display: block;
+  padding: 28px 10px 27px 10px;
+  text-align: center;
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+
+    .user-navigation__svg {
+      fill: #63d1bb;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .user-navigation__svg {
+      fill: #63d1bb;
+    }
+  }
+}
+
+.user-navigation__svg {
+  position: absolute;
+  opacity: 0.2;
+
+  &_search {
+    top: 32px;
+    left: 32px;
+  }
+
+  &_cart {
+    top: 31px;
+    left: 30px;
+  }
+}
