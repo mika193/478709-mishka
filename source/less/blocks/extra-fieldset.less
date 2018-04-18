@@ -12,6 +12,7 @@
   font-weight: 400;
   font-size: 19px;
   line-height: 18px;
+  font-family: inherit;
   color: #444444;
   border: 2px solid #000000;
   resize: none;
@@ -21,5 +22,12 @@
     border-bottom: 2px solid #62d1ba;
   }
 
-  .placeholder;
+  &::placeholder {
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 }

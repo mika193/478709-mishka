@@ -4,36 +4,7 @@
   list-style: none;
 }
 
-.pseudo () {
+.pseudo() {
   content: "";
   position: absolute;
-}
-
-.placeholder() {
-  &::-moz-placeholder {
-    font-weight: 400;
-    color: rgba(68, 68, 68, 0.3);
-  }
-
-  &::-webkit-input-placeholder {
-    font-weight: 400;
-    color: rgba(68, 68, 68, 0.3);
-  }
-
-  &:-ms-input-placeholder {
-    font-weight: 400;
-    color: rgba(68, 68, 68, 0.3);
-  }
-
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
-
-  &:focus::-moz-placeholder {
-    color: transparent;
-  }
-
-  &:focus:-ms-input-placeholder {
-    color: transparent;
-  }
 }

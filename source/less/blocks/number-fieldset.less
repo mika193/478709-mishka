@@ -25,7 +25,14 @@
     fill: #62d1ba;
   }
 
-  .placeholder;
+  &::placeholder {
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 }
 
 .number-fieldset__svg {
