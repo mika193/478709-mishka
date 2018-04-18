@@ -1,0 +1,33 @@
+.extra-fieldset {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.extra-fieldset__textarea {
+  width: 100%;
+  min-height: 142px;
+  margin-bottom: 24px;
+  padding: 9px 44px 18px 0;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
+  font-family: inherit;
+  color: #444444;
+  border: 2px solid #000000;
+  resize: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

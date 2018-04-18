@@ -1,0 +1,51 @@
+.promo-item__link {
+  position: relative;
+  display: block;
+  padding: 28px 95px 27px 30px;
+  font-size: 19px;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    .promo-item__svg {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    .promo-item__svg {
+      opacity: 0.3;
+    }
+  }
+
+  &_interior {
+    background-color: #63d1bb;
+  }
+
+  &_toys {
+    background-color: #56c3b2;
+  }
+}
+
+.promo-item__text {
+  width: 120px;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-item__svg {
+  position: absolute;
+  top: 50%;
+  opacity: 0.5;
+  transform: translateY(-50%);
+
+  &_interior {
+    right: 37px;
+  }
+
+  &_toy {
+    right: 27px;
+  }
+}

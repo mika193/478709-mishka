@@ -1,0 +1,28 @@
+.video {
+  position: relative;
+  width: 260px;
+  height: 150px;
+  background-image: url("../img/video-mobile@1x.jpg");
+}
+
+.video__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 101px;
+  height: 77px;
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  border: none;
+  transform: translate(-50%, -50%);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2) translate(-50%, -50%);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8) translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,36 @@
+.name-fieldset {
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+
+.name-fieldset__label {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 18px;
+}
+
+.name-fieldset__entry-field {
+  width: 100%;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
+  color: #444444;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #62d1ba;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

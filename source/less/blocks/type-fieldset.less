@@ -1,0 +1,52 @@
+.type-fieldset {
+  padding-top: 39px;
+  padding-bottom: 40px;
+}
+
+.type-fieldset__label {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-left: 64px;
+  line-height: 18px;
+
+  &::before {
+    .pseudo;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+
+  &::after {
+    .pseudo;
+    top: 11px;
+    left: 12px;
+    display: none;
+    width: 15px;
+    height: 15px;
+    background-color: #62d1ba;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border: 2px solid #62d1ba;
+  }
+}
+
+.type-fieldset__input {
+  &:checked + .type-fieldset__label::after {
+    display: block;
+  }
+
+  &:focus + .type-fieldset__label::before {
+    border: 2px solid #62d1ba;
+  }
+
+  &:disabled + .type-fieldset__label::before {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+}

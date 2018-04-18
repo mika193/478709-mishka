@@ -1,0 +1,35 @@
+.copyright {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 23px 10px;
+  font-size: 19px;
+  line-height: 18px;
+}
+
+.copyright__link {
+  margin-left: 30px;
+
+  &:hover,
+  &:focus {
+    .copyright__svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    .copyright__svg {
+      fill: rgba(70, 193, 174, 0.3);
+    }
+  }
+
+  &:active + .copyright__text {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.copyright__svg {
+  fill: #63d1bb;
+}
