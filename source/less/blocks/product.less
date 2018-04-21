@@ -1,7 +1,35 @@
 .product {
-  margin-bottom: 30px;
+  padding: 0;
 }
 
 .product__list {
   .ul-style-none;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.product__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .product__item {
+    margin-right: 52px;
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
 }

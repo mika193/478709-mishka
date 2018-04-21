@@ -18,18 +18,146 @@
   background-color: #f1f1f1;
 }
 
+.page__section-title {
+  margin: 0;
+}
+
 .page__container {
-  padding: 30px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  &_no-padding {
+    padding: 0;
+  }
 }
 
 .page__footer {
-  padding-left: 30px;
-  padding-right: 30px;
   background-color: #f1f1f1;
+}
+
+.page__footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page__footer-logo {
+  display: none;
+}
+
+.page__social {
+  margin: 0;
 }
 
 .page__product-order {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.page__product {
+  margin-bottom: 30px;
+}
+
+.page__video-block {
+  margin-bottom: 60px;
+}
+
+.page__knitwork-order {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .page {
+    min-width: 768px;
+  }
+
+  .page__container {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  .page__header {
+    position: relative;
+    background-color: #f1f1f1;
+
+    &::before {
+      .pseudo;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #ffffff;
+    }
+
+    &_index {
+      background-color: #f9f9f9;
+    }
+  }
+
+  .page__title {
+    margin-bottom: 82px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page__promo {
+    margin-bottom: 24px;
+  }
+
+  .page__advantages {
+    margin-bottom: 50px;
+  }
+
+  .page__footer {
+    padding-top: 50px;
+    padding-bottom: 52px;
+  }
+
+  .page__footer-logo {
+    display: block;
+  }
+
+  .page__footer-container {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page {
+    min-width: 1150px;
+  }
+
+  .page__title {
+    margin-bottom: 130px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page__container {
+    width: 1150px;
+  }
+
+  .page__promo {
+    margin-bottom: 100px;
+  }
+
+  .page__advantages {
+    margin-left: 175px;
+  }
+
+  .page__reviews {
+    margin-left: 175px;
+  }
+
+  .page__contacts {
+    margin-bottom: 105px;
+    margin-left: 175px;
+  }
+
+  .page__video-block {
+    margin-left: 682px;
+  }
 }

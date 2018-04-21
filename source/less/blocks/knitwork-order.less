@@ -1,5 +1,4 @@
 .knitwork-order {
-  margin: 0;
   padding: 30px;
 }
 
@@ -14,18 +13,27 @@
 }
 
 .knitwork-order__fieldset {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 5px;
   padding: 0;
   border: none;
-  border-top: 1px solid #63d1bb;
 }
 
 .knitwork-order__legend {
+  position: relative;
   margin: 0;
-  padding-right: 27px;
+  width: 100%;
   color: #63d1bb;
   text-transform: uppercase;
+
+  &::before {
+    .pseudo;
+    top: 50%;
+    right: 0;
+    width: 198px;
+    height: 1px;
+    background-color: #63d1bb;
+  }
 }
 
 .knitwork-order__explanations {
@@ -42,4 +50,63 @@
   margin-bottom: 25px;
   font-weight: 700;
   line-height: 16px;
+}
+
+@media (min-width: 768px) {
+  .knitwork-order {
+    padding: 30px 0 50px;
+  }
+
+  .knitwork-order__description {
+    width: 768px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0 50px;
+  }
+
+  .knitwork-order__legend::before {
+    display: none;
+  }
+
+  .knitwork-order__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .knitwork-order__explanations {
+    margin: 0;
+  }
+
+  .knitwork-order__button {
+    width: 230px;
+    margin: 0;
+  }
+
+  .knitwork-order__fieldset {
+    &_email {
+      margin-top: -5px;
+      margin-bottom: 0;
+    }
+
+    &_extra {
+      margin-bottom: 55px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .knitwork-order__description {
+    width: 700px;
+    padding: 0;
+  }
+
+  .knitwork-order__wrapper {
+    width: 700px;
+    padding: 0;
+  }
 }

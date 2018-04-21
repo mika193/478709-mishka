@@ -1,6 +1,13 @@
+.promo-item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .promo-item__link {
   position: relative;
   display: block;
+  width: 100%;
   padding: 28px 95px 27px 30px;
   font-size: 19px;
   color: #ffffff;
@@ -8,7 +15,7 @@
   &:hover,
   &:focus {
     .promo-item__svg {
-      opacity: 0.7;
+      fill: rgba(20, 144, 128, 0.7);
     }
   }
 
@@ -16,7 +23,7 @@
     color: rgba(255, 255, 255, 0.3);
 
     .promo-item__svg {
-      opacity: 0.3;
+      fill: rgba(20, 144, 128, 0.3);
     }
   }
 
@@ -38,7 +45,7 @@
 .promo-item__svg {
   position: absolute;
   top: 50%;
-  opacity: 0.5;
+  fill: rgba(20, 144, 128, 0.5);
   transform: translateY(-50%);
 
   &_interior {
@@ -47,5 +54,27 @@
 
   &_toy {
     right: 27px;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo-item {
+    width: 334px;
+  }
+
+  .promo-item__link {
+    padding: 36px;
+  }
+
+  .promo-item__text {
+    width: 111px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .promo-item {
+    width: 525px;
   }
 }

@@ -1,6 +1,9 @@
 .name-fieldset {
-  padding-top: 32px;
   padding-bottom: 8px;
+}
+
+.name-fieldset__legend {
+  margin-bottom: 32px;
 }
 
 .name-fieldset__label {
@@ -32,5 +35,69 @@
 
   &:focus::placeholder {
     color: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .name-fieldset {
+    position: relative;
+    padding-top: 69px;
+    padding-bottom: 25px;
+  }
+
+  .name-fieldset__wrapper {
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .name-fieldset__legend {
+    align-self: flex-start;
+    width: 167px;
+  }
+
+  .name-fieldset__content-wrapper {
+    width: 501px;
+  }
+
+  .name-fieldset__label {
+    display: inline-block;
+    margin: 0;
+    margin-right: 23px;
+    vertical-align: middle;
+  }
+
+  .name-fieldset__entry-field {
+    width: 377px;
+    padding-left: 16px;
+
+    &_wide {
+      width: 427px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .name-fieldset__wrapper {
+    width: 1150px;
+  }
+
+  .name-fieldset__legend {
+    width: 175px;
+    text-align: center;
+  }
+
+  .name-fieldset__content-wrapper {
+    width: 700px;
+  }
+
+  .name-fieldset__entry-field {
+    width: 575px;
+    padding-left: 23px;
+
+    &_wide {
+      width: 629px;
+    }
   }
 }

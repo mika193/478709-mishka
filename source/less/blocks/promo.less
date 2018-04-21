@@ -12,4 +12,36 @@
 
 .promo__list {
   .ul-style-none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .promo {
+    background-color: #f9f9f9;
+  }
+
+  .promo__slogan {
+    min-height: 570px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .promo__list {
+    width: 668px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .promo__slogan {
+    min-height: 575px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .promo__list {
+    width: 1050px;
+  }
 }

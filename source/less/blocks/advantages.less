@@ -1,5 +1,5 @@
 .advantages {
-  padding: 33px 37px 31px 30px;
+  padding: 33px 0 31px;
 }
 
 .advantages__title {
@@ -49,5 +49,45 @@
     width: 205px;
     background-image: url("../img/icon-feature-gift.svg");
     background-position-x: 4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages__list {
+    column-count: 2;
+  }
+
+  .advantages__item {
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_ecology {
+      width: 220px;
+    }
+
+    &_style {
+      width: 240px;
+    }
+
+    &_like {
+      width: 215px;
+    }
+
+    &_handmade {
+      width: 255px;
+    }
+
+    &_gift {
+      width: 240px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .advantages {
+    width: 700px;
   }
 }
