@@ -1,5 +1,6 @@
 .site-navigation {
   .ul-style-none;
+  width: 100%;
 }
 
 .site-navigation__item {
@@ -19,5 +20,49 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-navigation {
+    position: relative;
+    display: flex;
+    width: 334px;
+  }
+
+  .site-navigation__item {
+    width: 167px;
+    border: none;
+  }
+
+  .site-navigation__link {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .site-navigation {
+    width: 440px;
+    background-color: #ffffff;
+  }
+
+  .site-navigation__item {
+    width: 206px;
+    padding-left: 37px;
+    border-right: 1px solid rgba(68, 68, 68, 0.1);
+    border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+
+    &_catalog {
+      width: 234px;
+      padding-left: 50px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .site-navigation__link {
+    text-align: left;
   }
 }

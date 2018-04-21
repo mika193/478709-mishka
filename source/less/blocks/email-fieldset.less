@@ -4,6 +4,10 @@
   padding-bottom: 8px;
 }
 
+.email-fieldset__legend {
+  margin-bottom: 18px;
+}
+
 .email-fieldset__entry-field {
   width: 100%;
   margin-bottom: 24px;
@@ -35,9 +39,64 @@
   }
 }
 
+.email-fieldset__content-wrapper {
+  position: relative;
+}
+
 .email-fieldset__svg {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 8px;
   fill: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .email-fieldset {
+    position: relative;
+    padding-bottom: 50px;
+    background-color: #f1f1f1;
+  }
+
+  .email-fieldset__wrapper {
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .email-fieldset__legend {
+    align-self: flex-start;
+    width: 167px;
+  }
+
+  .email-fieldset__content-wrapper {
+    width: 501px;
+    margin-bottom: 0;
+  }
+
+  .email-fieldset__entry-field {
+    margin-bottom: 0;
+    padding-left: 16px;
+    background-color: #f1f1f1;
+  }
+
+  .email-fieldset__svg {
+    right: 25px;
+    top: 15px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .email-fieldset__wrapper {
+    width: 1150px;
+  }
+
+  .email-fieldset__legend {
+    width: 175px;
+    text-align: center;
+  }
+
+  .email-fieldset__content-wrapper {
+    width: 700px;
+  }
 }

@@ -7,31 +7,31 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
-    <header>
-      <nav class="main-navigation">
+    <header class="page__header">
+      <nav class="main-navigation main-navigation page__container page__container_no-padding">
         <div class="main-navigation__logo logo">
           <a class="logo__link" href="index.html">
             <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </a>
         </div>
-        <button class="main-navigation__toggle" type="button">
+        <button class="main-navigation__toggle main-navigation__toggle_off" type="button">
           <span class="visually-hidden">кнопка переключения меню</span>
         </button>
-        <ul class="main-navigation__list site-navigation">
-          <li class="site-navigation__item">
+        <ul class="main-navigation__site-list site-navigation">
+          <li class="site-navigation__item site-navigation__item_catalog">
             <a class="site-navigation__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link" href="form.html">Вязание на заказ</a>
+            <a class="site-navigation__link">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-navigation__list user-navigation">
-          <li class="user-navigation__item">
+        <ul class="main-navigation__user-list user-navigation">
+          <li class="user-navigation__item user-navigation__item_search">
             <a class="user-navigation__link" href="#">
               <svg class="user-navigation__svg user-navigation__svg_search" width = "18" height= "18">
                 <use xlink:href = "img/pictures.svg#search"></use>
               </svg>
-              Поиск по сайту
+              <span class="user-navigation__span">Поиск по сайту</span>
             </a>
           </li>
           <li class="user-navigation__item">
@@ -43,104 +43,143 @@
             </a>
           </li>
         </ul>
+        <ul class="main-navigation__stock-list stock-navigation">
+          <li class="stock-navigation__item">
+            <a class="stock-navigation__link" href="catalog.html">Новые поступления</a>
+          </li>
+          <li class="stock-navigation__item">
+            <a class="stock-navigation__link" href="form.html">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-navigation__text">Бесплатная доставка по России</p>
       </nav>
     </header>
     <main>
       <h1 class="page__title">Вязание на заказ</h1>
-      <form class="knitwork-order" method="post" action="https://echo.htmlacademy.ru">
+      <form class="page__knitwork-order knitwork-order" method="post" action="https://echo.htmlacademy.ru">
+        <h2 class="visually-hidden">Форма заказа</h2>
         <p class="knitwork-order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <fieldset class="knitwork-order__fieldset type-fieldset">
-          <legend class="knitwork-order__legend type-fieldset__legend">тип</legend>
-          <input class="type-fieldset__input visually-hidden" id="type-1" type="radio" name="type" value="accessories" checked>
-          <label class="type-fieldset__label" for="type-1">Аксессуар для интерьера</label>
-          <input class="type-fieldset__input visually-hidden" id="type-2" type="radio" name="type" value="toys">
-          <label class="type-fieldset__label" for="type-2">Детская игрушка</label>
+        <fieldset class="knitwork-order__fieldset knitwork-order__fieldset_type type-fieldset">
+          <div class="type-fieldset__wrapper">
+            <h3 class="knitwork-order__legend type-fieldset__legend">тип</h3>
+            <div class="type-fieldset__content-wrapper">
+              <input class="type-fieldset__input visually-hidden" id="type-1" type="radio" name="type" value="accessories" checked>
+              <label class="type-fieldset__label" for="type-1">Аксессуар для интерьера</label>
+              <input class="type-fieldset__input visually-hidden" id="type-2" type="radio" name="type" value="toys">
+              <label class="type-fieldset__label" for="type-2">Детская игрушка</label>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="knitwork-order__fieldset color-fieldset">
-          <legend class="knitwork-order__legend color-fieldset__legend">цвет</legend>
-          <input class="color-fieldset__input visually-hidden" id="color-1" type="checkbox" name="white" checked>
-          <label class="color-fieldset__label" for="color-1">Белый</label>
-          <input class="color-fieldset__input visually-hidden" id="color-2" type="checkbox" name="gray" checked>
-          <label class="color-fieldset__label" for="color-2">Серый</label>
-          <input class="color-fieldset__input visually-hidden" id="color-3" type="checkbox" name="tiffany">
-          <label class="color-fieldset__label" for="color-3">&#171;Тиффани&#187;</label>
-          <input class="color-fieldset__input visually-hidden" id="color-4" type="checkbox" name="black">
-          <label class="color-fieldset__label" for="color-4">Черный</label>
-          <input class="color-fieldset__input visually-hidden" id="color-5" type="checkbox" name="pink">
-          <label class="color-fieldset__label" for="color-5">Розовый</label>
-          <input class="color-fieldset__input visually-hidden" id="color-6" type="checkbox" name="orange">
-          <label class="color-fieldset__label" for="color-6">Оранжевый</label>
+          <div class="color-fieldset__wrapper">
+            <h3 class="knitwork-order__legend color-fieldset__legend">цвет</h3>
+            <div class="color-fieldset__content-wrapper">
+              <input class="color-fieldset__input visually-hidden" id="color-1" type="checkbox" name="white" checked>
+              <label class="color-fieldset__label" for="color-1">Белый</label>
+              <input class="color-fieldset__input visually-hidden" id="color-2" type="checkbox" name="gray" checked>
+              <label class="color-fieldset__label" for="color-2">Серый</label>
+              <input class="color-fieldset__input visually-hidden" id="color-3" type="checkbox" name="tiffany">
+              <label class="color-fieldset__label" for="color-3">&#171;Тиффани&#187;</label>
+              <input class="color-fieldset__input visually-hidden" id="color-4" type="checkbox" name="black">
+              <label class="color-fieldset__label" for="color-4">Черный</label>
+              <input class="color-fieldset__input visually-hidden" id="color-5" type="checkbox" name="pink">
+              <label class="color-fieldset__label" for="color-5">Розовый</label>
+              <input class="color-fieldset__input visually-hidden" id="color-6" type="checkbox" name="orange">
+              <label class="color-fieldset__label" for="color-6">Оранжевый</label>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="knitwork-order__fieldset name-fieldset">
-          <legend class="knitwork-order__legend name-fieldset__legend">Фио</legend>
-          <label class="name-fieldset__label" for="name">Имя:</label>
-          <input class="name-fieldset__entry-field" id="name" name="name" type="text" placeholder="Введите ваше имя*" required>
-          <label class="name-fieldset__label" for="surname">Фамилия:</label>
-          <input class="name-fieldset__entry-field" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
-          <label class="name-fieldset__label" for="patronymic">Отчество:</label>
-          <input class="name-fieldset__entry-field" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+          <div class="name-fieldset__wrapper">
+            <h3 class="knitwork-order__legend name-fieldset__legend">Фио</h3>
+            <div class="name-fieldset__content-wrapper">
+              <label class="name-fieldset__label" for="name">Имя:</label>
+              <input class="name-fieldset__entry-field name-fieldset__entry-field_wide" id="name" name="name" type="text" placeholder="Введите ваше имя*" required>
+              <label class="name-fieldset__label" for="surname">Фамилия:</label>
+              <input class="name-fieldset__entry-field" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
+              <label class="name-fieldset__label" for="patronymic">Отчество:</label>
+              <input class="name-fieldset__entry-field" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+            </div>
+          </div>
         </fieldset>
         <fieldset class="knitwork-order__fieldset number-fieldset">
-          <legend class="knitwork-order__legend number-fieldset__legend">тел</legend>
-          <label class="visually-hidden" for="phone-number">Введите номер телефона</label>
-          <input class="number-fieldset__entry-field" id="phone-number" name="phone-number" type="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
-          <svg class="number-fieldset__svg" width = "25" height= "24">
-            <use xlink:href = "img/pictures.svg#phone"></use>
-          </svg>
+          <div class="number-fieldset__wrapper">
+            <h3 class="knitwork-order__legend number-fieldset__legend">тел</h3>
+            <div class="number-fieldset__content-wrapper">
+              <label class="visually-hidden" for="phone-number">Введите номер телефона</label>
+              <input class="number-fieldset__entry-field" id="phone-number" name="phone-number" type="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+              <svg class="number-fieldset__svg" width = "25" height= "24">
+                <use xlink:href = "img/pictures.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
         </fieldset>
-        <fieldset class="knitwork-order__fieldset email-fieldset">
-          <legend class="knitwork-order__legend email-fieldset__legend">E-mail</legend>
-          <label class="visually-hidden" for="email">Введите адрес электронной почты</label>
-          <input class="email-fieldset__entry-field" id="email" name="email" type="email" placeholder="Ваш Email*" required>
-          <svg class="email-fieldset__svg" width = "32" height= "32">
-            <use xlink:href = "img/pictures.svg#email"></use>
-          </svg>
+        <fieldset class="knitwork-order__fieldset knitwork-order__fieldset_email email-fieldset">
+          <div class="email-fieldset__wrapper">
+            <h3 class="knitwork-order__legend email-fieldset__legend">E-mail</h3>
+            <div class="email-fieldset__content-wrapper">
+              <label class="visually-hidden" for="email">Введите адрес электронной почты</label>
+              <input class="email-fieldset__entry-field" id="email" name="email" type="email" placeholder="Ваш Email*" required>
+              <svg class="email-fieldset__svg" width = "32" height= "32">
+                <use xlink:href = "img/pictures.svg#email"></use>
+              </svg>
+            </div>
+          </div>
         </fieldset>
-        <fieldset class="knitwork-order__fieldset extra-fieldset">
-          <legend class="knitwork-order__legend extra-fieldset__legend">доп</legend>
-          <label class="visually-hidden" for="text">Напишите дополнительные пожелания</label>
-          <textarea class="extra-fieldset__textarea" id="text" name="extra-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <fieldset class="knitwork-order__fieldset knitwork-order__fieldset_extra extra-fieldset">
+          <div class="extra-fieldset__wrapper">
+            <h3 class="knitwork-order__legend extra-fieldset__legend">доп</h3>
+            <label class="visually-hidden" for="text">Напишите дополнительные пожелания</label>
+            <textarea class="extra-fieldset__textarea" id="text" name="extra-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
         </fieldset>
-        <p class="knitwork-order__explanations">*Поля обязательны для заполнения</p>
-        <button class="knitwork-order__button button" type="submit">отправить заказ</button>
+        <div class="knitwork-order__wrapper">
+          <p class="knitwork-order__explanations">*Поля обязательны для заполнения</p>
+          <button class="knitwork-order__button button" type="submit">отправить заказ</button>
+        </div>
       </form>
     </main>
     <footer class="page__footer">
-      <ul class="social">
-        <li class="social__item">
-          <a class="social__link social__link_instagramm" href="#">
-            <span class="visually-hidden">Инстаграмм</span>
-            <svg class="social__svg" width = "22" height= "21">
-              <use xlink:href = "img/pictures.svg#instagramm"></use>
-            </svg>
+        <div class="page__container page__footer-container">
+          <a class="page__footer-logo footer-logo" href="index.html">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка"> <!--пока сделала img для наглядности сетки, потом будет svg -->
           </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link_facebook" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-            <svg class="social__svg" width = "15" height= "28">
-              <use xlink:href = "img/pictures.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link_twitter" href="#">
-            <span class="visually-hidden">Твиттер</span>
-            <svg class="social__svg" width = "23" height= "20">
-              <use xlink:href = "img/pictures.svg#twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <p class="copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
-          <svg class="copyright__svg" width = "27" height= "34">
-            <use xlink:href = "img/pictures.svg#academy"></use>
-          </svg>
-        </a>
-        <span class="copyright__text">Разработано</span>
-      </p>
-    </footer>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link_instagramm" href="#">
+                <span class="visually-hidden">Инстаграмм</span>
+                <svg class="social__svg" width = "22" height= "21">
+                  <use xlink:href = "img/pictures.svg#instagramm"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link_facebook" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg class="social__svg" width = "15" height= "28">
+                  <use xlink:href = "img/pictures.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link_twitter" href="#">
+                <span class="visually-hidden">Твиттер</span>
+                <svg class="social__svg" width = "23" height= "20">
+                  <use xlink:href = "img/pictures.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="visually-hidden">HTML Academy</span>
+              <svg class="copyright__svg" width = "27" height= "34">
+                <use xlink:href = "img/pictures.svg#academy"></use>
+              </svg>
+            </a>
+            <span class="copyright__text">Разработано</span>
+          </p>
+        </div>
+      </footer>
   </body>
 </html>
