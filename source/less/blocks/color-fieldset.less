@@ -48,7 +48,7 @@
     border: 2px solid #62d1ba;
   }
 
-  &:disabled + .tcolor-fieldset__label::before {
+  &:active + .color-fieldset__label::before {
     border: 2px solid rgba(68, 68, 68, 0.3);
   }
 }
@@ -74,8 +74,15 @@
   }
 
   .color-fieldset__content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
     width: 501px;
-    column-count: 2;
+  }
+
+  .color-fieldset__label {
+    width: 250px;
   }
 }
 
@@ -90,10 +97,8 @@
   }
 
   .color-fieldset__content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-start;
     width: 800px;
-    column-count: 1;
   }
 
   .color-fieldset__label {
