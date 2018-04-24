@@ -14,6 +14,11 @@
             <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </a>
         </div>
+        <!--
+          main-navigation__toggle_off - скрывает кнопку меню в отсутствие скрипта;
+          main-navigation__toggle_open - кнопка-гамбургер;
+          main-navigation__site-list_closed, main-navigation__user-list_closed - скрывает меню при работе скрипта
+        -->
         <button class="main-navigation__toggle main-navigation__toggle_off" type="button">
           <span class="visually-hidden">кнопка переключения меню</span>
         </button>
@@ -106,7 +111,7 @@
             </table>
             <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки">
             <p class="week-product__price">Цена: 990 руб.</p>
-            <a class="week-product__button button" href="#">заказать</a>
+            <a class="week-product__button button" href="order-form.html">заказать</a>
           </div>
         </section>
         <section class="page__advantages advantages">
@@ -123,7 +128,11 @@
         <section class="page__reviews reviews">
           <h2 class="reviews__title page__section-title section-title">Отзывы</h2>
           <blockquote class="reviews__content">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__text">
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+              <br class="reviews__br">
+              и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
             <cite class="reviews__author">
               <span class="reviews__author-name">Анастасия Красильникова</span>
               <span class="reviews__author-email">@misssssiskras</span>
@@ -139,8 +148,10 @@
           </div>
           <a class="reviews__write-button button" href="#">написать</a>
         </section>
-        <section class="page__contacts contacts">
-          <h2 class="contacts__title page__section-title section-title">Контакты:</h2>
+      </div>
+      <section class="page__contacts contacts">
+        <div class="page__container contacts__container">
+          <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__list">
             <div class="contacts__item">
               <dt class="contacts__type">e-mail:</dt>
@@ -159,12 +170,12 @@
               </dd>
             </div>
           </dl>
-          <div class="contacts__map-container" id="map">
-            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-          </div>
-          <a class="contacts__button button" href="#">напишите нам</a>
-        </section>
-      </div>
+        </div>
+        <div class="contacts__map-container" id="map">
+          <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </div>
+        <a class="contacts__button button" href="#">напишите нам</a>
+      </section>
     </main>
     <footer class="page__footer">
       <div class="page__container page__footer-container">
@@ -209,6 +220,7 @@
       </div>
     </footer>
     <section class="page__product-order product-order">
+      <div class="product-order__overlay"></div>
       <form class="product-order__form order-form" method="post" action="https://echo.htmlacademy.ru">
         <h2 class="order-form__title page__section-title section-title">добавить в корзину</h2>
         <fieldset class="order-form__fieldset size-fieldset">
@@ -223,5 +235,7 @@
         <button class="order-form__button button button_green" type="submit">добавить</button>
       </form>
     </section>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

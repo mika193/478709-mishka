@@ -1,16 +1,14 @@
 .video-block {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 30px 0;
+  padding: 22px 0 32px;
   border: 1px solid #ececec;
-
-  &:hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
 }
 
 .video-block__title {
   position: relative;
+  margin: 0;
   margin-bottom: 25px;
   padding-left: 90px;
   font-size: 17px;
@@ -27,13 +25,13 @@
 
 .video-block__video {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 25px;
 }
 
 .video-block__description {
   margin: 0;
-  margin-bottom: 29px;
-  padding: 0 30px;
+  margin-bottom: 26px;
+  padding: 0 33px;
   font-weight: 400;
   font-size: 13px;
   color: #444444;
@@ -41,6 +39,24 @@
 
 .video-block__button {
   margin: 0 auto;
+
+  &::before {
+    .pseudo;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 258px;
+    height: 501px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active::before {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: 768px) {
@@ -51,23 +67,36 @@
 
   .video-block__title {
     order: 1;
-    padding-left: 102px;
+    padding-left: 107px;
     font-size: 20px;
+    margin-bottom: 33px;
 
     &::before {
       top: -5px;
-      left: 47px;
+      left: 41px;
     }
+  }
+
+  .video-block__video {
+    margin-bottom: 38px;
   }
 
   .video-block__description {
     order: 2;
-    padding: 0 42px;
+    padding: 0 39px;
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 35px;
   }
 
   .video-block__button {
     order: 3;
     width: 584px;
+
+    &::before {
+      width: 667px;
+      height: 744px;
+    }
   }
 }
 
@@ -76,20 +105,21 @@
     display: block;
     position: relative;
     width: 370px;
-    padding: 100px 80px 60px;
+    padding: 92px 56px 60px 80px;
   }
 
   .video-block__title {
+    margin-bottom: 35px;
     padding-left: 0;
 
     &::before {
-      top: -65px;
+      top: -52px;
       left: 0;
     }
   }
 
   .video-block__description {
-    margin-bottom: 56px;
+    margin-bottom: 45px;
     padding: 0;
   }
 
@@ -101,5 +131,12 @@
 
   .video-block__button {
     width: 230px;
+
+    &::before {
+      right: 0;
+      left: auto;
+      width: 1050px;
+      height: 453px;
+    }
   }
 }

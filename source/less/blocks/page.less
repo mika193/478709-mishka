@@ -11,7 +11,7 @@
 
 .page__title {
   margin: 0;
-  padding: 75px 10px 74px;
+  padding: 68px 10px 76px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
@@ -54,6 +54,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
+
+  &_active {
+    display: block;
+  }
 }
 
 .page__product {
@@ -61,7 +66,7 @@
 }
 
 .page__video-block {
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .page__knitwork-order {
@@ -87,7 +92,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 80px;
+      height: 88px;
       background-color: #ffffff;
     }
 
@@ -97,9 +102,14 @@
   }
 
   .page__title {
-    margin-bottom: 82px;
+    margin-bottom: 84px;
+    padding-top: 26px;
     font-size: 43px;
     line-height: 50px;
+
+    &_form {
+      margin-bottom: 76px;
+    }
   }
 
   .page__promo {
@@ -107,11 +117,11 @@
   }
 
   .page__advantages {
-    margin-bottom: 50px;
+    margin: 0;
   }
 
   .page__footer {
-    padding-top: 50px;
+    padding-top: 54px;
     padding-bottom: 52px;
   }
 
@@ -123,6 +133,14 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .page__product {
+    margin-bottom: 51px;
+  }
+
+  .page__video-block {
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -132,12 +150,21 @@
 
   .page__title {
     margin-bottom: 130px;
+    padding-bottom: 100px;
     font-size: 53px;
     line-height: 57px;
+
+    &_form {
+      margin-bottom: 123px;
+    }
   }
 
   .page__container {
     width: 1150px;
+  }
+
+  .page__footer {
+    padding-top: 52px;
   }
 
   .page__promo {
@@ -153,11 +180,15 @@
   }
 
   .page__contacts {
-    margin-bottom: 105px;
-    margin-left: 175px;
+    margin: 0 auto;
+  }
+
+  .page__product {
+    margin-bottom: 57px;
   }
 
   .page__video-block {
-    margin-left: 682px;
+    margin-bottom: 104px;
+    margin-left: 680px;
   }
 }

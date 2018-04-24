@@ -3,12 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 26px 5px 28px;
+  width: 100%;
+  padding: 26px 5px 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .social__item {
-  margin-right: 36px;
+  margin-right: 41px;
 
   &:last-child {
     margin-right: 0;
@@ -38,8 +39,9 @@
 
 @media (min-width: 768px) {
   .social {
-    border: none;
+    align-items: flex-end;
     width: 300px;
     padding: 0 5px;
+    border: none;
   }
 }

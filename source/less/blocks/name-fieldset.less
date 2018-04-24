@@ -1,23 +1,23 @@
 .name-fieldset {
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .name-fieldset__legend {
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .name-fieldset__label {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   line-height: 18px;
 }
 
 .name-fieldset__entry-field {
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   padding-bottom: 16px;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
   color: #444444;
   border: none;
@@ -41,8 +41,8 @@
 @media (min-width: 768px) {
   .name-fieldset {
     position: relative;
-    padding-top: 69px;
-    padding-bottom: 25px;
+    padding-top: 53px;
+    padding-bottom: 13px;
   }
 
   .name-fieldset__wrapper {
@@ -55,6 +55,7 @@
   .name-fieldset__legend {
     align-self: flex-start;
     width: 167px;
+    padding-top: 8px;
   }
 
   .name-fieldset__content-wrapper {
@@ -64,13 +65,16 @@
   .name-fieldset__label {
     display: inline-block;
     margin: 0;
-    margin-right: 23px;
+    margin-right: 20px;
     vertical-align: middle;
+    font-size: 19px;
   }
 
   .name-fieldset__entry-field {
-    width: 377px;
-    padding-left: 16px;
+    width: 376px;
+    margin-bottom: 33px;
+    padding: 3px 5px 19px 19px;
+    font-size: 19px;
 
     &_wide {
       width: 427px;
@@ -79,12 +83,17 @@
 }
 
 @media (min-width: 1150px) {
+  .name-fieldset {
+    padding-top: 55px;
+  }
+
   .name-fieldset__wrapper {
     width: 1150px;
   }
 
   .name-fieldset__legend {
-    width: 175px;
+    width: 167px;
+    margin-right: 10px;
     text-align: center;
   }
 
@@ -94,10 +103,10 @@
 
   .name-fieldset__entry-field {
     width: 575px;
-    padding-left: 23px;
+    padding-left: 17px;
 
     &_wide {
-      width: 629px;
+      width: 627px;
     }
   }
 }

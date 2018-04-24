@@ -2,21 +2,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 31px 0 40px;
+  padding: 36px 0 40px;
 }
 
 .reviews__title {
-  margin-bottom: 38px;
+  margin-bottom: 24px;
 }
 
 .reviews__content {
   margin: 0;
+  margin-bottom: 33px;
   padding: 0;
 }
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
   padding: 0;
   font-weight: 400;
   font-size: 15px;
@@ -24,9 +25,12 @@
   color: #444444;
 }
 
+.reviews__br {
+  display: none;
+}
+
 .reviews__author {
   display: block;
-  margin-bottom: 35px;
   font-style: normal;
 }
 
@@ -67,29 +71,35 @@
 
 .reviews__write-button {
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 @media (min-width: 768px) {
   .reviews {
     position: relative;
+    padding-top: 78px;
+    padding-bottom: 100px;
   }
 
   .reviews__title {
-    margin-bottom: 55px;
+    margin-bottom: 47px;
+    margin-left: -5px;
   }
 
   .reviews__write-button {
     align-self: flex-start;
     width: 175px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .reviews__content {
     order: 1;
     width: 100%;
-    margin-bottom: 120px;
   }
 
   .reviews__text {
+    margin-bottom: 58px;
     font-size: 17px;
   }
 
@@ -97,13 +107,22 @@
     width: 334px;
   }
 
+  .reviews__author-name {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+
   .reviews__toggle-button-wrapper {
     position: absolute;
-    right: 20px;
-    bottom: 164px;
+    right: 12px;
+    bottom: 134px;
   }
 
   .reviews__toggle-button {
+    width: 65px;
+    margin-bottom: 0;
+    margin-left: 16px;
     border: none;
   }
 }
@@ -111,9 +130,28 @@
 @media (min-width: 1150px) {
   .reviews {
     width: 875px;
+    padding-top: 68px;
+    padding-bottom: 154px;
+  }
+
+  .reviews__write-button {
+    margin-top: 8px;
   }
 
   .reviews__text {
     width: 775px;
+    margin-bottom: 40px;
+  }
+
+  .reviews__br {
+    display: block;
+  }
+
+  .reviews__author-name {
+    font-size: 17px;
+  }
+
+  .reviews__toggle-button-wrapper {
+    bottom: 188px;
   }
 }

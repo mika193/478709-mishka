@@ -1,8 +1,10 @@
 .product {
   padding: 0;
+  padding-top: 30px;
 }
 
 .product__list {
+  margin: 0;
   .ul-style-none;
   display: flex;
   align-items: stretch;
@@ -21,15 +23,19 @@
   .product {
     padding: 0;
   }
+
+  .product__item {
+    margin-bottom: 53px;
+  }
 }
 
 @media (min-width: 1150px) {
   .product__item {
     margin-right: 52px;
+    margin-bottom: 0;
 
     &:last-child {
       margin-right: 0;
-      margin-bottom: 30px;
     }
   }
 }

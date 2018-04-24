@@ -3,21 +3,21 @@
 }
 
 .color-fieldset__legend {
-  margin-bottom: 39px;
+  margin-bottom: 26px;
 }
 
 .color-fieldset__label {
   position: relative;
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   padding-top: 10px;
-  padding-left: 64px;
+  padding-left: 62px;
   line-height: 18px;
 
   &::before {
     .pseudo;
     top: 0;
-    left: 0;
+    left: 1px;
     width: 38px;
     height: 38px;
     border: 2px solid #444444;
@@ -25,7 +25,7 @@
 
   &::after {
     .pseudo;
-    top: 6px;
+    top: 9px;
     left: 4px;
     display: none;
     width: 32px;
@@ -56,8 +56,8 @@
 @media (min-width: 768px) {
   .color-fieldset {
     position: relative;
-    padding-top: 69px;
-    padding-bottom: 20px;
+    padding-top: 64px;
+    padding-bottom: 11px;
     background-color: #f1f1f1;
   }
 
@@ -82,7 +82,25 @@
   }
 
   .color-fieldset__label {
-    width: 250px;
+    width: 239px;
+    margin-bottom: 58px;
+    padding-top: 0;
+    padding-left: 81px;
+    font-size: 19px;
+
+    &::before {
+      top: -16px;
+      width: 54px;
+      height: 52px;
+    }
+
+    &::after {
+      top: 0;
+      left: 11px;
+      width: 33px;
+      height: 22px;
+      transform: scale(1);
+    }
   }
 }
 
@@ -92,7 +110,9 @@
   }
 
   .color-fieldset__legend {
-    width: 175px;
+    width: 166px;
+    margin-right: 9px;
+    padding-top: 2px;
     text-align: center;
   }
 

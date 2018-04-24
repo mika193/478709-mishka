@@ -1,5 +1,5 @@
 .advantages {
-  padding: 33px 0 31px;
+  padding: 35px 0 20px;
 }
 
 .advantages__title {
@@ -7,12 +7,14 @@
 }
 
 .advantages__list {
+  margin: 0;
   .ul-style-none;
 }
 
 .advantages__item {
   margin-bottom: 30px;
-  padding-top: 55px;
+  padding-top: 54px;
+  line-height: 20px;
   background-repeat: no-repeat;
 
   &:last-child {
@@ -33,16 +35,27 @@
   &_like {
     width: 185px;
     background-image: url("../img/icon-feature-heart.svg");
-    background-position-x: 8px;
+    background-position: 8px 6px;
   }
 
   &_handmade {
+    width: 215px;
     background-image: url("../img/icon-feature-ball.svg");
     background-position-x: 2px;
   }
 
   &_support {
-    background-image: url("../img/icon-feature-rocket.svg");
+    position: relative;
+    padding-top: 50px;
+
+    &::before {
+      .pseudo;
+      top: 0;
+      left: -6px;
+      width: 55px;
+      height: 23px;
+      background-image: url("../img/icon-feature-rocket.svg");
+    }
   }
 
   &_gift {
@@ -53,35 +66,59 @@
 }
 
 @media (min-width: 768px) {
+  .advantages {
+    padding-top: 50px;
+    padding-bottom: 29px;
+  }
+
+  .advantages__title {
+    margin-bottom: 50px;
+    margin-left: -5px;
+  }
+
   .advantages__list {
-    column-count: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .advantages__item {
-    margin-bottom: 60px;
+    width: 334px;
+    margin-bottom: 56px;
+    font-size: 20px;
+    line-height: 22px;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     &_ecology {
-      width: 220px;
+      padding-right: 115px;
     }
 
     &_style {
-      width: 240px;
+      order: 2;
+      padding-right: 94px;
     }
 
     &_like {
-      width: 215px;
+      order: 4;
+      padding-right: 114px;
     }
 
     &_handmade {
-      width: 255px;
+      order: 1;
+      padding-right: 79px;
     }
 
     &_gift {
-      width: 240px;
+      order: 5;
+      padding-right: 94px;
+    }
+
+    &_support {
+      order: 3;
+      width: 334px;
     }
   }
 }
@@ -89,5 +126,16 @@
 @media (min-width: 1150px) {
   .advantages {
     width: 700px;
+    padding-top: 60px;
+    padding-bottom: 34px;
+  }
+
+  .advantages__item {
+    width: 350px;
+    margin-bottom: 57px;
+  }
+
+  &_ecology {
+    padding-right: 118px;
   }
 }
