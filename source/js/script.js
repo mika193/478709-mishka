@@ -37,6 +37,7 @@ if(modalWindow) {
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
+
       if (modalWindow.classList.contains('page__product-order_active')){
         modalWindow.classList.remove('page__product-order_active')
       }
@@ -85,6 +86,7 @@ if(mapBlock) {
 
 !function(root, factory) {
   "function" == typeof define && define.amd ?
+
   define([], function() {
     return root.svg4everybody = factory();
   }) :
@@ -101,6 +103,7 @@ if(mapBlock) {
       for (var clone = target.cloneNode(!0); clone.childNodes.length; ) {
         fragment.appendChild(clone.firstChild);
       }
+
       parent.appendChild(fragment);
     }
   }
@@ -125,12 +128,14 @@ if(mapBlock) {
     function oninterval() {
       for (var index = 0; index < uses.length; ) {
         var use = uses[index], parent = use.parentNode, svg = getSVGAncestor(parent), src = use.getAttribute("xlink:href") || use.getAttribute("href");
+
         if (!src && opts.attributeName && (src = use.getAttribute(opts.attributeName)),
               svg && src) {
           if (polyfill) {
             if (!opts.validate || opts.validate(src, svg, use)) {
               parent.removeChild(use);
               var srcSplit = src.split("#"), url = srcSplit.shift(), id = srcSplit.join("#");
+
               if (url.length) {
                 var xhr = requests[url];
                 xhr || (xhr = requests[url] = new XMLHttpRequest(), xhr.open("GET", url), xhr.send(),
@@ -140,17 +145,23 @@ if(mapBlock) {
                   svg: svg,
                   id: id
                 }),
+
                 loadreadystatechange(xhr);
               }
+
               else {embed(parent, svg, document.getElementById(id));}
             }
+
             else {++index, ++numberOfSvgUseElementsToBypass;}
           }
         }
+
         else {++index;}
       }
+
       (!uses.length || uses.length - numberOfSvgUseElementsToBypass > 0) && requestAnimationFrame(oninterval, 67);
     }
+
     var polyfill, opts = Object(rawopts), newerIEUA = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/, webkitUA = /\bAppleWebKit\/(\d+)\b/, olderEdgeUA = /\bEdge\/12\.(\d+)\b/, edgeUA = /\bEdge\/.(\d+)\b/, inIframe = window.top !== window.self;
 
     polyfill = "polyfill" in opts ? opts.polyfill : newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537 || edgeUA.test(navigator.userAgent) && inIframe;
@@ -175,79 +186,52 @@ var productItem = document.querySelectorAll('.product-item');
 if(productItem) {
   for(var i=0; i < productItem.length; i++) {
     var productWrapper = productItem[i].querySelector('.product-item__description-wrapper');
-    hoverActive(productItem[i], productWrapper);
+    var productItemHover = 'product-item__description-wrapper_hover';
+    var productItemActive = 'product-item__description-wrapper_active';
+    var productItemTag = 'A IMG svg use';
+    hoverActive(productItem[i], productWrapper, productItemHover, productItemActive, productItemTag);
   }
 }
 
-function hoverActive(block, element) {
+var videoBlock = document.querySelector('.video-block');
 
+if(videoBlock) {
+  var videoBlockHover = 'video-block_hover';
+  var videoBlockActive = 'video-block_active';
+  var videoBlockTag = 'A';
+  hoverActive(videoBlock, videoBlock, videoBlockHover, videoBlockActive, videoBlockTag);
+}
+
+function hoverActive(block, element, elementClassHover, elementClassActive, tag) {
   block.addEventListener('mouseover', function(event) {
     var target = event.target.tagName;
 
-    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
-      element.classList.add('product-item__description-wrapper_hover');
+    if(tag.indexOf(target) !== -1) {
+      element.classList.add(elementClassHover);
     }
   });
 
   block.addEventListener('mouseout', function(event) {
     var target = event.target.tagName;
 
-    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
-      element.classList.remove('product-item__description-wrapper_hover');
+    if(tag.indexOf(target) !== -1) {
+      element.classList.remove(elementClassHover);
     }
   });
 
   block.addEventListener('mousedown', function(event) {
     var target = event.target.tagName;
 
-    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
-      element.classList.add('product-item__description-wrapper_active');
+    if(tag.indexOf(target) !== -1) {
+      element.classList.add(elementClassActive);
     }
   });
 
   block.addEventListener('mouseup', function(event) {
     var target = event.target.tagName;
 
-    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
-      element.classList.remove('product-item__description-wrapper_active');
-    }
-  });
-}
-
-var videoBlock = document.querySelector('.video-block');
-
-if(videoBlock) {
-  videoBlock.addEventListener('mouseover', function(event) {
-    var target = event.target.tagName;
-
-    if(target == 'A') {
-      videoBlock.classList.add('video-block_hover');
-    }
-
-    else {
-      videoBlock.classList.remove('video-block_hover')
-    }
-  });
-
-  videoBlock.addEventListener('mouseout', function(event) {
-    var target = event.target.tagName;
-
-    if(target == 'A') {
-      videoBlock.classList.remove('video-block_hover');
-    }
-  });
-
-  videoBlock.addEventListener('mousedown', function(event) {
-    var target = event.target.tagName;
-    if(target == 'A') {
-      videoBlock.classList.add('video-block_active');
-    }
-  });
-
-  videoBlock.addEventListener('mouseup', function(event) {
-    var target = event.target.tagName;
-    if(target == 'A') {
-      videoBlock.classList.remove('video-block_active');
+    if(tag.indexOf(target) !== -1) {
+      element.classList.remove(elementClassActive);
     }
   });
 }

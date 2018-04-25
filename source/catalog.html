@@ -187,12 +187,14 @@
         <h2 class="order-form__title page__section-title section-title">добавить в корзину</h2>
         <fieldset class="order-form__fieldset size-fieldset">
           <legend class="size-fieldset__legend">Выберете размер:</legend>
-          <input class="size-fieldset__input visually-hidden" id="size-s" type="radio" name="size" value="s" checked>
-          <label class="size-fieldset__label" for="size-s">s</label>
-          <input class="size-fieldset__input visually-hidden" id="size-m" type="radio" name="size" value="m">
-          <label class="size-fieldset__label" for="size-m">m</label>
-          <input class="size-fieldset__input visually-hidden" id="size-l" type="radio" name="size" value="l">
-          <label class="size-fieldset__label" for="size-l">l</label>
+          <div class="size-fieldset__wrapper">
+            <input class="size-fieldset__input visually-hidden" id="size-s" type="radio" name="size" value="s" checked>
+            <label class="size-fieldset__label" for="size-s">s</label>
+            <input class="size-fieldset__input visually-hidden" id="size-m" type="radio" name="size" value="m">
+            <label class="size-fieldset__label" for="size-m">m</label>
+            <input class="size-fieldset__input visually-hidden" id="size-l" type="radio" name="size" value="l">
+            <label class="size-fieldset__label" for="size-l">l</label>
+          </div>
         </fieldset>
         <button class="order-form__button button button_green" type="submit">добавить</button>
       </form>
