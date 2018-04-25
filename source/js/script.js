@@ -58,7 +58,6 @@ function modalOpen(element) {
 var mapBlock = document.getElementById('map');
 if(mapBlock) {
   var size = window.outerHeight;
-  console.log(size);
   ymaps.ready(init);
   var myMap;
 
@@ -170,3 +169,85 @@ if(mapBlock) {
 });
 
 svg4everybody();
+
+var productItem = document.querySelectorAll('.product-item');
+
+if(productItem) {
+  for(var i=0; i < productItem.length; i++) {
+    var productWrapper = productItem[i].querySelector('.product-item__description-wrapper');
+    hoverActive(productItem[i], productWrapper);
+  }
+}
+
+function hoverActive(block, element) {
+
+  block.addEventListener('mouseover', function(event) {
+    var target = event.target.tagName;
+
+    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
+      element.classList.add('product-item__description-wrapper_hover');
+    }
+  });
+
+  block.addEventListener('mouseout', function(event) {
+    var target = event.target.tagName;
+
+    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
+      element.classList.remove('product-item__description-wrapper_hover');
+    }
+  });
+
+  block.addEventListener('mousedown', function(event) {
+    var target = event.target.tagName;
+
+    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
+      element.classList.add('product-item__description-wrapper_active');
+    }
+  });
+
+  block.addEventListener('mouseup', function(event) {
+    var target = event.target.tagName;
+
+    if(target == 'A' || target == 'IMG' || target == 'svg' || target == 'use') {
+      element.classList.remove('product-item__description-wrapper_active');
+    }
+  });
+}
+
+var videoBlock = document.querySelector('.video-block');
+
+if(videoBlock) {
+  videoBlock.addEventListener('mouseover', function(event) {
+    var target = event.target.tagName;
+
+    if(target == 'A') {
+      videoBlock.classList.add('video-block_hover');
+    }
+
+    else {
+      videoBlock.classList.remove('video-block_hover')
+    }
+  });
+
+  videoBlock.addEventListener('mouseout', function(event) {
+    var target = event.target.tagName;
+
+    if(target == 'A') {
+      videoBlock.classList.remove('video-block_hover');
+    }
+  });
+
+  videoBlock.addEventListener('mousedown', function(event) {
+    var target = event.target.tagName;
+    if(target == 'A') {
+      videoBlock.classList.add('video-block_active');
+    }
+  });
+
+  videoBlock.addEventListener('mouseup', function(event) {
+    var target = event.target.tagName;
+    if(target == 'A') {
+      videoBlock.classList.remove('video-block_active');
+    }
+  });
+}
