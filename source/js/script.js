@@ -57,6 +57,8 @@ function modalOpen(element) {
 
 var mapBlock = document.getElementById('map');
 if(mapBlock) {
+  var size = window.outerHeight;
+  console.log(size);
   ymaps.ready(init);
   var myMap;
 
@@ -75,7 +77,10 @@ if(mapBlock) {
 
     myMap.geoObjects.add(myPlacemark);
     myMap.behaviors.disable('scrollZoom');
-    myMap.behaviors.disable('drag');
+
+    if (size < 700) {
+      myMap.behaviors.disable('drag');
+    }
   }
 }
 
