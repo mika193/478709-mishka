@@ -4,16 +4,16 @@
 }
 
 .number-fieldset__legend {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .number-fieldset__entry-field {
   width: 100%;
-  margin-bottom: 24px;
   padding: 9px 44px 18px 0;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
+  font-family: inherit;
   color: #444444;
   border: none;
   border-bottom: 2px solid #000000;
@@ -44,16 +44,16 @@
 
 .number-fieldset__svg {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 9px;
   fill: rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
   .number-fieldset {
     position: relative;
-    padding-top: 69px;
-    padding-bottom: 25px;
+    padding-top: 53px;
+    padding-bottom: 11px;
     background-color: #f1f1f1;
   }
 
@@ -67,6 +67,7 @@
   .number-fieldset__legend {
     align-self: flex-start;
     width: 167px;
+    padding-top: 12px;
   }
 
   .number-fieldset__content-wrapper {
@@ -77,12 +78,13 @@
   .number-fieldset__entry-field {
     margin-bottom: 0;
     padding-left: 16px;
+    font-size: 19px;
     background-color: #f1f1f1;
   }
 
   .number-fieldset__svg {
     right: 25px;
-    top: 15px;
+    top: 7px;
   }
 }
 
@@ -92,11 +94,16 @@
   }
 
   .number-fieldset__legend {
-    width: 175px;
+    width: 160px;
+    margin-right: 14px;
     text-align: center;
   }
 
   .number-fieldset__content-wrapper {
     width: 700px;
+  }
+
+  .number-fieldset__svg {
+    right: 7px;
   }
 }

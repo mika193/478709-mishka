@@ -1,11 +1,11 @@
 .knitwork-order {
-  padding: 30px;
+  padding: 23px 30px 28px;
 }
 
 .knitwork-order__description {
   width: 242px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   padding: 0;
   font-weight: 400;
   font-size: 13px;
@@ -23,6 +23,8 @@
   position: relative;
   margin: 0;
   width: 100%;
+  line-height: 16px;
+  font-size: 17px;
   color: #63d1bb;
   text-transform: uppercase;
 
@@ -38,7 +40,7 @@
 
 .knitwork-order__explanations {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 31px;
   padding: 0;
   font-weight: 400;
   font-size: 14px;
@@ -48,20 +50,24 @@
 
 .knitwork-order__button {
   margin-bottom: 25px;
+  padding-bottom: 18px;
   font-weight: 700;
   line-height: 16px;
+  font-size: 17px;
 }
 
 @media (min-width: 768px) {
   .knitwork-order {
-    padding: 30px 0 50px;
+    padding: 0 0 48px;
   }
 
   .knitwork-order__description {
     width: 768px;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 73px;
     padding: 0 50px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .knitwork-order__legend::before {
@@ -80,6 +86,9 @@
 
   .knitwork-order__explanations {
     margin: 0;
+    padding-bottom: 7px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .knitwork-order__button {
@@ -94,12 +103,16 @@
     }
 
     &_extra {
-      margin-bottom: 55px;
+      margin-bottom: 53px;
     }
   }
 }
 
 @media (min-width: 1150px) {
+  .knitwork-order {
+    padding-top: 0;
+  }
+
   .knitwork-order__description {
     width: 700px;
     padding: 0;
@@ -108,5 +121,9 @@
   .knitwork-order__wrapper {
     width: 700px;
     padding: 0;
+  }
+
+  .knitwork-order__fieldset_extra {
+    margin-bottom: 50px;
   }
 }

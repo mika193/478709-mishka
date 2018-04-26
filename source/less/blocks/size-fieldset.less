@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.size-fieldset__wrapper {
+  display: flex;
+}
+
 .size-fieldset__legend {
   margin-bottom: 28px;
   width: 100%;
@@ -48,6 +52,11 @@
 }
 
 @media (min-width: 768px) {
+  .size-fieldset {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .size-fieldset__legend {
     font-size: 17px;
   }

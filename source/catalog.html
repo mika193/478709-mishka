@@ -14,6 +14,11 @@
             <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </a>
         </div>
+        <!--
+          main-navigation__toggle_off - скрывает кнопку меню в отсутствие скрипта;
+          main-navigation__toggle_open - кнопка-гамбургер;
+          main-navigation__site-list_closed, main-navigation__user-list_closed - скрывает меню при работе скрипта
+        -->
         <button class="main-navigation__toggle main-navigation__toggle_off" type="button">
           <span class="visually-hidden">кнопка переключения меню</span>
         </button>
@@ -65,18 +70,18 @@
                 <img class="product-item__image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
               </a>
               <div class="product-item__description-wrapper">
-                <a class="product-item__link product-item__link_title" href="#">
-                  <h3 class="product-item__title">Зайчик-попрыгайчик</h3>
-                </a>
+                <h3 class="product-item__title">
+                  <a class="product-item__link" href="#">Зайчик-попрыгайчик</a>
+                </h3>
                 <p class="product-item__description">Рост 30 см, вес 200 г</p>
                 <div class="product-item__wrapper">
                   <p class="product-item__price"> 1 200 руб.</p>
-                  <button class="product-item__button" type="button">
+                  <a class="product-item__button" href="order-form.html">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="product-item__svg" width = "20" height= "19">
                       <use xlink:href = "img/pictures.svg#product-cart"></use>
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -85,18 +90,18 @@
                 <img class="product-item__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
               </a>
               <div class="product-item__description-wrapper">
-                <a class="product-item__link product-item__link_title" href="#">
-                  <h3 class="product-item__title">Корзинка для белья</h3>
-                </a>
+                <h3 class="product-item__title">
+                  <a class="product-item__link" href="#">Корзинка для белья</a>
+                </h3>
                 <p class="product-item__description">Диаметр 15 см, высота 10 см</p>
                 <div class="product-item__wrapper">
                   <p class="product-item__price"> 690 руб.</p>
-                  <button class="product-item__button" type="button">
+                  <a class="product-item__button" href="order-form.html">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="product-item__svg" width = "20" height= "19">
                       <use xlink:href = "img/pictures.svg#product-cart"></use>
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -105,18 +110,18 @@
                 <img class="product-item__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
               </a>
               <div class="product-item__description-wrapper">
-                <a class="product-item__link product-item__link_title" href="#">
-                  <h3 class="product-item__title">Большая корзинка для игрушек</h3>
-                </a>
+                <h3 class="product-item__title">
+                  <a class="product-item__link" href="#">Большая корзинка для игрушек</a>
+                </h3>
                 <p class="product-item__description">Диаметр 30 см, высота 30 см</p>
                 <div class="product-item__wrapper">
                   <p class="product-item__price"> 1 500 руб.</p>
-                  <button class="product-item__button" type="button">
+                  <a class="product-item__button" href="order-form.html">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="product-item__svg" width = "20" height= "19">
                       <use xlink:href = "img/pictures.svg#product-cart"></use>
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -130,7 +135,7 @@
             </button>
           </div>
           <p class="video-block__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="video-block__button button button_small">Сделать заказ</a>
+          <a class="video-block__button button button_small" href="#">Сделать заказ</a>
         </section>
       </div>
     </main>
@@ -139,7 +144,7 @@
         <a class="page__footer-logo footer-logo" href="index.html">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка"> <!--пока сделала img для наглядности сетки, потом будет svg -->
         </a>
-        <ul class="social">
+        <ul class="page__social social">
           <li class="social__item">
             <a class="social__link social__link_instagramm" href="#">
               <span class="visually-hidden">Инстаграмм</span>
@@ -177,20 +182,23 @@
       </div>
     </footer>
     <section class="page__product-order product-order">
+      <div class="product-order__overlay"></div>
       <form class="product-order__form order-form" method="post" action="https://echo.htmlacademy.ru">
-        <h2 class="order-form__title">добавить в корзину</h2>
+        <h2 class="order-form__title page__section-title section-title">добавить в корзину</h2>
         <fieldset class="order-form__fieldset size-fieldset">
           <legend class="size-fieldset__legend">Выберете размер:</legend>
-          <input class="size-fieldset__input visually-hidden" id="size-s" type="radio" name="size" value="s">
-          <label class="size-fieldset__label" for="size-s">s</label>
-          <input class="size-fieldset__input visually-hidden" id="size-m" type="radio" name="size" value="m">
-          <label class="size-fieldset__label" for="size-m">m</label>
-          <input class="size-fieldset__input visually-hidden" id="size-l" type="radio" name="size" value="l">
-          <label class="size-fieldset__label" for="size-l">l</label>
+          <div class="size-fieldset__wrapper">
+            <input class="size-fieldset__input visually-hidden" id="size-s" type="radio" name="size" value="s" checked>
+            <label class="size-fieldset__label" for="size-s">s</label>
+            <input class="size-fieldset__input visually-hidden" id="size-m" type="radio" name="size" value="m">
+            <label class="size-fieldset__label" for="size-m">m</label>
+            <input class="size-fieldset__input visually-hidden" id="size-l" type="radio" name="size" value="l">
+            <label class="size-fieldset__label" for="size-l">l</label>
+          </div>
         </fieldset>
         <button class="order-form__button button button_green" type="submit">добавить</button>
       </form>
-      <div class="product-order__overlay"></div>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

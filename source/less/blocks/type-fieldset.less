@@ -1,9 +1,9 @@
 .type-fieldset {
-  padding-bottom: 40px;
+  padding-bottom: 23px;
 }
 
 .type-fieldset__legend {
-  margin-bottom: 39px;
+  margin-bottom: 23px;
 }
 
 .type-fieldset__label {
@@ -11,12 +11,12 @@
   display: block;
   margin-bottom: 15px;
   padding-top: 10px;
-  padding-left: 64px;
+  padding-left: 63px;
   line-height: 18px;
 
   &::before {
     .pseudo;
-    top: 0;
+    top: 3px;
     left: 0;
     width: 38px;
     height: 38px;
@@ -26,7 +26,7 @@
 
   &::after {
     .pseudo;
-    top: 11px;
+    top: 15px;
     left: 12px;
     display: none;
     width: 15px;
@@ -72,7 +72,23 @@
   }
 
   .type-fieldset__label {
-    margin-bottom: 25px;
+    margin-bottom: 57px;
+    padding-top: 0;
+    font-size: 19px;
+    padding-left: 80px;
+
+    &::before {
+      top: -14px;
+      width: 51px;
+      height: 51px;
+    }
+
+    &::after {
+      top: 1px;
+      left: 16px;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .type-fieldset__content-wrapper {
@@ -81,12 +97,17 @@
 }
 
 @media (min-width: 1150px) {
+  .type-fieldset {
+    padding-bottom: 7px;
+  }
+
   .type-fieldset__wrapper {
     width: 1150px;
   }
 
   .type-fieldset__legend {
-    width: 175px;
+    width: 166px;
+    margin-right: 10px;
     text-align: center;
   }
 

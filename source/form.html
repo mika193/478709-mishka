@@ -14,6 +14,11 @@
             <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </a>
         </div>
+        <!--
+          main-navigation__toggle_off - скрывает кнопку меню в отсутствие скрипта;
+          main-navigation__toggle_open - кнопка-гамбургер;
+          main-navigation__site-list_closed, main-navigation__user-list_closed - скрывает меню при работе скрипта
+        -->
         <button class="main-navigation__toggle main-navigation__toggle_off" type="button">
           <span class="visually-hidden">кнопка переключения меню</span>
         </button>
@@ -55,7 +60,7 @@
       </nav>
     </header>
     <main>
-      <h1 class="page__title">Вязание на заказ</h1>
+      <h1 class="page__title page__title_form">Вязание на заказ</h1>
       <form class="page__knitwork-order knitwork-order" method="post" action="https://echo.htmlacademy.ru">
         <h2 class="visually-hidden">Форма заказа</h2>
         <p class="knitwork-order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -140,46 +145,47 @@
       </form>
     </main>
     <footer class="page__footer">
-        <div class="page__container page__footer-container">
-          <a class="page__footer-logo footer-logo" href="index.html">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка"> <!--пока сделала img для наглядности сетки, потом будет svg -->
-          </a>
-          <ul class="social">
-            <li class="social__item">
-              <a class="social__link social__link_instagramm" href="#">
-                <span class="visually-hidden">Инстаграмм</span>
-                <svg class="social__svg" width = "22" height= "21">
-                  <use xlink:href = "img/pictures.svg#instagramm"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link_facebook" href="#">
-                <span class="visually-hidden">Фейсбук</span>
-                <svg class="social__svg" width = "15" height= "28">
-                  <use xlink:href = "img/pictures.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link_twitter" href="#">
-                <span class="visually-hidden">Твиттер</span>
-                <svg class="social__svg" width = "23" height= "20">
-                  <use xlink:href = "img/pictures.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <p class="copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="visually-hidden">HTML Academy</span>
-              <svg class="copyright__svg" width = "27" height= "34">
-                <use xlink:href = "img/pictures.svg#academy"></use>
+      <div class="page__container page__footer-container">
+        <a class="page__footer-logo footer-logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка"> <!--пока сделала img для наглядности сетки, потом будет svg -->
+        </a>
+        <ul class="page__social social">
+          <li class="social__item">
+            <a class="social__link social__link_instagramm" href="#">
+              <span class="visually-hidden">Инстаграмм</span>
+              <svg class="social__svg" width = "22" height= "21">
+                <use xlink:href = "img/pictures.svg#instagramm"></use>
               </svg>
             </a>
-            <span class="copyright__text">Разработано</span>
-          </p>
-        </div>
-      </footer>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_facebook" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+              <svg class="social__svg" width = "15" height= "28">
+                <use xlink:href = "img/pictures.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link_twitter" href="#">
+              <span class="visually-hidden">Твиттер</span>
+              <svg class="social__svg" width = "23" height= "20">
+                <use xlink:href = "img/pictures.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <svg class="copyright__svg" width = "27" height= "34">
+              <use xlink:href = "img/pictures.svg#academy"></use>
+            </svg>
+          </a>
+          <span class="copyright__text">Разработано</span>
+        </p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

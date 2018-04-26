@@ -63,11 +63,14 @@
 
     &_search {
       width: 82px;
+      padding: 0;
     }
   }
 
   .user-navigation__link {
-    padding-right: 0;
+    width: 100%;
+    min-height: 88px;
+    padding: 30px 0 28px 10px;
     text-align: right;
   }
 
@@ -82,6 +85,17 @@
     white-space: nowrap;
     overflow: hidden;
     border: 0;
+  }
+
+  .user-navigation__svg {
+    &_search {
+      top: 36px;
+    }
+
+    &_cart {
+      top: 34px;
+      left: 32px;
+    }
   }
 }
 

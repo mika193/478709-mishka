@@ -3,34 +3,20 @@
   flex-wrap: wrap;
   padding: 0;
   border: 1px solid #ececec;
-
-  &:hover > .product-item__description-wrapper {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
 }
 
 .product-item__link {
   display: block;
 
-  &_image:focus + .product-item__description-wrapper {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
   }
 
-  &_image:active + .product-item__description-wrapper {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  &_title {
-    color: #000000;
-
-    &:hover,
-    &:focus {
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-    &:active {
-      color: rgba(0, 0, 0, 0.3);
-    }
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -42,28 +28,42 @@
 }
 
 .product-item__description-wrapper {
+  position: relative;
   width: 100%;
-  padding: 28px 27px 0;
+  padding: 21px 27px 0;
+  overflow: hidden;
+}
+
+.product-item__description-wrapper_hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product-item__description-wrapper_active {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .product-item__description {
   width: 100%;
+  margin-top: 6px;
+  margin-bottom: 19px;
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
   color: #444444;
-  border-bottom: 1px solid #ececec;
 }
 
 .product-item__wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 27px;
+  border-top: 1px solid #ececec;
 }
 
 .product-item__price {
   width: 170px;
   margin: 0;
-  padding: 28px 30px 30px 0;
+  padding-right: 30px;
   font-size: 15px;
 }
 
@@ -91,12 +91,35 @@
     width: 333px;
   }
 
+  .product-item__title {
+    width: 240px;
+    font-size: 20px;
+  }
+
   .product-item__description-wrapper {
+    display: flex;
+    flex-direction: column;
     width: 333px;
+    min-height: 333px;
+    padding-top: 24px;
+    padding-bottom: 28px;
   }
 
   .product-item__description {
-    min-height: 200px;
+    font-size: 15px;
+  }
+
+  .product-item__wrapper {
+    flex-direction: row;
+    margin-top: auto;
+    padding: 0 5px;
+    padding-top: 21px;
+  }
+
+  .product-item__price {
+    width: 100px;
+    padding-right: 0;
+    font-size: 17px;
   }
 }
 
@@ -111,13 +134,15 @@
 
   .product-item__description-wrapper {
     width: 315px;
+    min-height: 197px;
   }
 
   .product-item__description {
-    min-height: 60px;
+    margin-bottom: 0;
   }
 
-  .product-item__title {
-    min-height: 53px;
+  .product-item__wrapper {
+    padding-left: 0;
+    padding-right: 3px;
   }
 }
