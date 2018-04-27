@@ -1,4 +1,17 @@
 .footer-logo {
-  width: 180px;
+  width: 102px;
   padding-left: 0;
+
+  &:hover[href],
+  &:focus[href] {
+    .footer-logo__svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &[href]:active {
+    .footer-logo__svg {
+      fill: rgba(70, 193, 174, 0.3);
+    }
+  }
 }

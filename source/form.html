@@ -11,7 +11,11 @@
       <nav class="main-navigation main-navigation page__container page__container_no-padding">
         <div class="main-navigation__logo logo">
           <a class="logo__link" href="index.html">
-            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            </picture>
           </a>
         </div>
         <!--
@@ -147,7 +151,10 @@
     <footer class="page__footer">
       <div class="page__container page__footer-container">
         <a class="page__footer-logo footer-logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка"> <!--пока сделала img для наглядности сетки, потом будет svg -->
+          <span class="visually-hidden">Мишка</span>
+          <svg class="footer-logo__svg" width = "102" height= "34">
+            <use xlink:href = "img/pictures.svg#footer-logo"></use>
+          </svg>
         </a>
         <ul class="page__social social">
           <li class="social__item">
@@ -187,5 +194,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>
