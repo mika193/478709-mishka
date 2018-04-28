@@ -11,12 +11,12 @@
   width: 86px;
   height: 35px;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }
@@ -24,15 +24,36 @@
 @media (min-width: 768px) {
   .logo {
     width: 371px;
+    padding-bottom: 19px;
     padding-left: 50px;
     border-top: none;
     border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+  }
+
+  .logo__image {
+    width: 112px;
+    height: 46px;
+  }
+
+  .logo__link {
+    width: 112px;
+    height: 46px;
   }
 }
 
 @media (min-width: 1150px) {
   .logo {
     width: 310px;
-    padding-left: 58px;
+    padding: 10px 5px 6px 57px;
+  }
+
+  .logo__image {
+    width: 155px;
+    height: 72px;
+  }
+
+  .logo__link {
+    width: 155px;
+    height: 72px;
   }
 }

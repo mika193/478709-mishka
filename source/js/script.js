@@ -63,9 +63,10 @@ if(mapBlock) {
   var myMap;
 
   function init(){
-    myMap = new ymaps.Map("map", {
+    myMap = new ymaps.Map('map', {
       center: [59.93878180, 30.32273263],
-      zoom: 16
+      zoom: 16,
+      controls: ['geolocationControl', 'zoomControl', 'routeEditor', 'rulerControl']
     });
 
     var myPlacemark = new ymaps.Placemark([59.93863106, 30.32305450], null, {

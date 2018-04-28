@@ -1,5 +1,10 @@
 .knitwork-order {
-  padding: 23px 30px 28px;
+  padding: 23px 30px 29px;
+}
+
+.knitwork-order__wrapper {
+  width: 260px;
+  margin: 0 auto;
 }
 
 .knitwork-order__description {
@@ -54,11 +59,18 @@
   font-weight: 700;
   line-height: 16px;
   font-size: 17px;
+  font-family: inherit;
 }
 
 @media (min-width: 768px) {
   .knitwork-order {
     padding: 0 0 48px;
+  }
+
+  .knitwork-order__wrapper {
+    display: flex;
+    width: 768px;
+    padding: 0 50px;
   }
 
   .knitwork-order__description {
@@ -74,7 +86,7 @@
     display: none;
   }
 
-  .knitwork-order__wrapper {
+  .knitwork-order__button-wrapper {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -94,6 +106,7 @@
   .knitwork-order__button {
     width: 230px;
     margin: 0;
+    padding: 16px 10px 16px 6px;
   }
 
   .knitwork-order__fieldset {
@@ -113,17 +126,25 @@
     padding-top: 0;
   }
 
+  .knitwork-order__wrapper {
+    width: 1150px;
+  }
+
   .knitwork-order__description {
     width: 700px;
     padding: 0;
   }
 
-  .knitwork-order__wrapper {
+  .knitwork-order__button-wrapper {
     width: 700px;
     padding: 0;
   }
 
   .knitwork-order__fieldset_extra {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
+  }
+
+  .knitwork-order__explanations {
+    padding-bottom: 5px;
   }
 }
