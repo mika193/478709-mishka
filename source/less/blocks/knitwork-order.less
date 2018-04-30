@@ -3,8 +3,19 @@
 }
 
 .knitwork-order__wrapper {
+  position: relative;
   width: 260px;
   margin: 0 auto;
+
+  &::before {
+    .pseudo;
+    top: 8px;
+    right: 0;
+    z-index: -1;
+    width: 198px;
+    height: 1px;
+    background-color: #63d1bb;
+  }
 }
 
 .knitwork-order__description {
@@ -26,21 +37,16 @@
 
 .knitwork-order__legend {
   position: relative;
+  z-index: 2;
+  display: inline-block;
   margin: 0;
-  width: 100%;
+  padding-right: 17px;
   line-height: 16px;
   font-size: 17px;
+  vertical-align: middle;
   color: #63d1bb;
+  background-color: #ffffff;
   text-transform: uppercase;
-
-  &::before {
-    .pseudo;
-    top: 50%;
-    right: 0;
-    width: 198px;
-    height: 1px;
-    background-color: #63d1bb;
-  }
 }
 
 .knitwork-order__explanations {
@@ -71,6 +77,15 @@
     display: flex;
     width: 768px;
     padding: 0 50px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .knitwork-order__legend {
+    padding-right: 0;
+    background-color: transparent;
   }
 
   .knitwork-order__description {
@@ -80,10 +95,6 @@
     padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
-  }
-
-  .knitwork-order__legend::before {
-    display: none;
   }
 
   .knitwork-order__button-wrapper {
@@ -97,6 +108,7 @@
   }
 
   .knitwork-order__explanations {
+    max-width: 350px;
     margin: 0;
     padding-bottom: 7px;
     font-size: 17px;
