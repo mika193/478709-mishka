@@ -90,7 +90,7 @@ gulp.task('style', function() {
     autoprefixer()
   ]))
   .pipe(gulp.dest('build/css'))
-  .pipe(csso({comments: false}))
+  .pipe(csso({restructure: false}))
   .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('build/css'))
   .pipe(server.stream());
