@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="page__header page__header_index">
@@ -114,9 +116,12 @@
               </tr>
             </table>
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-              <img class="week-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.webp 1x, img/content/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.webp 1x, img/content/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/triple-set-mobile@1x.webp 1x, img/content/triple-set-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+              <img class="week-product__image" src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
             </picture>
             <p class="week-product__price">Цена: 990 руб.</p>
             <a class="week-product__button button" href="order-form.html">заказать</a>
@@ -181,9 +186,12 @@
         </div>
         <div class="contacts__map-container" id="map">
           <picture>
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.webp 1x, img/content/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/map-tablet@1x.webp 1x, img/content/map-tablet@2x.webp 2x">
+            <source  type="image/webp" srcset="img/content/map-mobile@1x.webp 1x, img/content/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x">
+            <img class="contacts__map-image" src="img/content/map-mobile@1x.jpg" srcset="img/content/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
         </div>
         <a class="contacts__button button" href="#">напишите нам</a>
@@ -253,7 +261,6 @@
       </form>
     </section>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

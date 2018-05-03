@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="page__header">
@@ -102,12 +104,18 @@
           <div class="knitwork-order__wrapper">
             <h3 class="knitwork-order__legend name-fieldset__legend">Фио</h3>
             <div class="name-fieldset__content-wrapper">
-              <label class="name-fieldset__label" for="name">Имя:</label>
-              <input class="name-fieldset__entry-field name-fieldset__entry-field_wide" id="name" name="name" type="text" placeholder="Введите ваше имя*" required>
-              <label class="name-fieldset__label" for="surname">Фамилия:</label>
-              <input class="name-fieldset__entry-field" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
-              <label class="name-fieldset__label" for="patronymic">Отчество:</label>
-              <input class="name-fieldset__entry-field" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+              <p class="name-fieldset__name-wrapper">
+                <label class="name-fieldset__label" for="name">Имя:</label>
+                <input class="name-fieldset__entry-field name-fieldset__entry-field_wide" id="name" name="name" type="text" placeholder="Введите ваше имя*" required>
+              </p>
+              <p class="name-fieldset__name-wrapper">
+                <label class="name-fieldset__label" for="surname">Фамилия:</label>
+                <input class="name-fieldset__entry-field" id="surname" name="surname" type="text" placeholder="Укажите фамилию*" required>
+              </p>
+              <p class="name-fieldset__name-wrapper">
+                <label class="name-fieldset__label" for="patronymic">Отчество:</label>
+                <input class="name-fieldset__entry-field" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+              </p>
             </div>
           </div>
         </fieldset>
@@ -193,7 +201,6 @@
         </p>
       </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

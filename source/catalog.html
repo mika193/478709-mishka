@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="page__header">
@@ -72,9 +74,12 @@
             <li class="product__item product-item">
               <a class="product-item__link product-item__link_image" href="#">
                 <picture>
-                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-                  <img class="product-item__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/photo-hare-desktop@1x.webp 1x, img/content/photo-hare-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/photo-hare-tablet@1x.webp 1x, img/content/photo-hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/photo-hare-mobile@1x.webp 1x, img/content/photo-hare-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/content/photo-hare-desktop@1x.jpg 1x, img/content/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/photo-hare-tablet@1x.jpg 1x, img/content/photo-hare-tablet@2x.jpg 2x">
+                  <img class="product-item__image" src="img/content/photo-hare-mobile@1x.jpg" srcset="img/content/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
                 </picture>
               </a>
               <div class="product-item__description-wrapper">
@@ -87,7 +92,7 @@
                   <a class="product-item__button" href="order-form.html">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="product-item__svg" width = "20" height= "19">
-                      <use xlink:href = "img/pictures.svg#product-cart"></use>
+                      <use xlink:href = "img/pictures.svg#cart"></use>
                     </svg>
                   </a>
                 </div>
@@ -96,9 +101,12 @@
             <li class="product__item product-item">
               <a class="product-item__link product-item__link_image" href="#">
                 <picture>
-                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-                  <img class="product-item__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/photo-bowl-desktop@1x.webp 1x, img/content/photo-bowl-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/photo-bowl-tablet@1x.webp 1x, img/content/photo-bowl-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/photo-bowl-mobile@1x.webp 1x, img/content/photo-bowl-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/content/photo-bowl-desktop@1x.jpg 1x, img/content/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/photo-bowl-tablet@1x.jpg 1x, img/content/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="product-item__image" src="img/content/photo-bowl-mobile@1x.jpg" srcset="img/content/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
                 </picture>
               </a>
               <div class="product-item__description-wrapper">
@@ -111,7 +119,7 @@
                   <a class="product-item__button" href="order-form.html">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="product-item__svg" width = "20" height= "19">
-                      <use xlink:href = "img/pictures.svg#product-cart"></use>
+                      <use xlink:href = "img/pictures.svg#cart"></use>
                     </svg>
                   </a>
                 </div>
@@ -120,9 +128,12 @@
             <li class="product__item product-item">
               <a class="product-item__link product-item__link_image" href="#">
                 <picture>
-                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
-                  <img class="product-item__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/photo-toys-desktop@1x.webp 1x, img/content/photo-toys-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/photo-toys-tablet@1x.webp 1x, img/content/photo-toys-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/photo-toys-mobile@1x.webp 1x, img/content/photo-toys-mobile@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/content/photo-toys-desktop@1x.jpg 1x, img/content/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/photo-toys-tablet@1x.jpg 1x, img/content/photo-toys-tablet@2x.jpg 2x">
+                  <img class="product-item__image" src="img/content/photo-toys-mobile@1x.jpg" srcset="img/content/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
                 </picture>
               </a>
               <div class="product-item__description-wrapper">
@@ -135,7 +146,7 @@
                   <a class="product-item__button" href="order-form.html">
                     <span class="visually-hidden">Добавить в корзину</span>
                     <svg class="product-item__svg" width = "20" height= "19">
-                      <use xlink:href = "img/pictures.svg#product-cart"></use>
+                      <use xlink:href = "img/pictures.svg#cart"></use>
                     </svg>
                   </a>
                 </div>
@@ -218,7 +229,6 @@
         <button class="order-form__button button button_green" type="submit">добавить</button>
       </form>
     </section>
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+svg4everybody()
+
 var menuButton = document.querySelector('.main-navigation__toggle');
 
 if(menuButton) {
@@ -84,103 +86,6 @@ if(mapBlock) {
     }
   }
 }
-
-!function(root, factory) {
-  "function" == typeof define && define.amd ?
-
-  define([], function() {
-    return root.svg4everybody = factory();
-  }) :
-  "object" == typeof module && module.exports ?
-  module.exports = factory() : root.svg4everybody = factory();
-}
-
-(this, function() {
-  function embed(parent, svg, target) {
-    if (target) {
-      var fragment = document.createDocumentFragment(), viewBox = !svg.hasAttribute("viewBox") && target.getAttribute("viewBox");
-      viewBox && svg.setAttribute("viewBox", viewBox);
-
-      for (var clone = target.cloneNode(!0); clone.childNodes.length; ) {
-        fragment.appendChild(clone.firstChild);
-      }
-
-      parent.appendChild(fragment);
-    }
-  }
-
-  function loadreadystatechange(xhr) {
-    xhr.onreadystatechange = function() {
-      if (4 === xhr.readyState) {
-        var cachedDocument = xhr._cachedDocument;
-        cachedDocument || (cachedDocument = xhr._cachedDocument = document.implementation.createHTMLDocument(""),
-        cachedDocument.body.innerHTML = xhr.responseText, xhr._cachedTarget = {}),
-        xhr._embeds.splice(0).map(function(item) {
-          var target = xhr._cachedTarget[item.id];
-          target || (target = xhr._cachedTarget[item.id] = cachedDocument.getElementById(item.id)),
-          embed(item.parent, item.svg, target);
-        });
-      }
-    },
-    xhr.onreadystatechange();
-  }
-
-  function svg4everybody(rawopts) {
-    function oninterval() {
-      for (var index = 0; index < uses.length; ) {
-        var use = uses[index], parent = use.parentNode, svg = getSVGAncestor(parent), src = use.getAttribute("xlink:href") || use.getAttribute("href");
-
-        if (!src && opts.attributeName && (src = use.getAttribute(opts.attributeName)),
-              svg && src) {
-          if (polyfill) {
-            if (!opts.validate || opts.validate(src, svg, use)) {
-              parent.removeChild(use);
-              var srcSplit = src.split("#"), url = srcSplit.shift(), id = srcSplit.join("#");
-
-              if (url.length) {
-                var xhr = requests[url];
-                xhr || (xhr = requests[url] = new XMLHttpRequest(), xhr.open("GET", url), xhr.send(),
-                xhr._embeds = []),
-                xhr._embeds.push({
-                  parent: parent,
-                  svg: svg,
-                  id: id
-                }),
-
-                loadreadystatechange(xhr);
-              }
-
-              else {embed(parent, svg, document.getElementById(id));}
-            }
-
-            else {++index, ++numberOfSvgUseElementsToBypass;}
-          }
-        }
-
-        else {++index;}
-      }
-
-      (!uses.length || uses.length - numberOfSvgUseElementsToBypass > 0) && requestAnimationFrame(oninterval, 67);
-    }
-
-    var polyfill, opts = Object(rawopts), newerIEUA = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/, webkitUA = /\bAppleWebKit\/(\d+)\b/, olderEdgeUA = /\bEdge\/12\.(\d+)\b/, edgeUA = /\bEdge\/.(\d+)\b/, inIframe = window.top !== window.self;
-
-    polyfill = "polyfill" in opts ? opts.polyfill : newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537 || edgeUA.test(navigator.userAgent) && inIframe;
-
-    var requests = {}, requestAnimationFrame = window.requestAnimationFrame || setTimeout, uses = document.getElementsByTagName("use"), numberOfSvgUseElementsToBypass = 0;
-
-    polyfill && oninterval();
-  }
-
-  function getSVGAncestor(node) {
-    for (var svg = node; "svg" !== svg.nodeName.toLowerCase() && (svg = svg.parentNode); ) {}
-    return svg;
-  }
-
-  return svg4everybody;
-});
-
-svg4everybody();
 
 var productItem = document.querySelectorAll('.product-item');
 
