@@ -1,9 +1,9 @@
 .name-fieldset {
-  padding-bottom: 4px;
+  padding-bottom: 5px;
 }
 
 .name-fieldset__legend {
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 }
 
 .name-fieldset__label {
@@ -48,7 +48,7 @@
 @media (min-width: 768px) {
   .name-fieldset {
     position: relative;
-    padding-top: 53px;
+    padding-top: 56px;
     padding-bottom: 13px;
   }
 
@@ -79,18 +79,25 @@
     width: 376px;
     margin-top: 1px;
     margin-bottom: 32px;
-    padding: 4px 5px 18px 18px;
+    padding: 4px 5px 11px 18px;
     font-size: 19px;
+    line-height: 19px;
 
     &_wide {
       width: 427px;
+    }
+  }
+
+  @-moz-document url-prefix("") {
+    .name-fieldset__entry-field {
+      padding-bottom: 18px;
     }
   }
 }
 
 @media (min-width: 1150px) {
   .name-fieldset {
-    padding-top: 54px;
+    padding-top: 58px;
   }
 
   .name-fieldset__legend {

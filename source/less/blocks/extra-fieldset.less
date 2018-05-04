@@ -1,7 +1,13 @@
 .extra-fieldset {
   position: relative;
   padding-top: 19px;
-  padding-bottom: 11px;
+  padding-bottom: 8px;
+}
+
+@-moz-document url-prefix("") {
+  .extra-fieldset {
+    padding-bottom: 11px;
+  }
 }
 
 .extra-fieldset__legend {
@@ -55,6 +61,7 @@
     margin-bottom: 0;
     padding-left: 14px;
     font-size: 19px;
+    line-height: 19px;
   }
 }
 
