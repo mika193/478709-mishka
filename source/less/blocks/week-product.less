@@ -8,12 +8,10 @@
   &::after {
     .pseudo;
     left: -30px;
-    bottom: -5px;
+    bottom: -8px;
     width: 320px;
     height: 6px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-size: 320px 6px;
-    background-position-x: -7px;
+    background-image: url("../img/zigzag-line-mobile.png");
   }
 }
 
@@ -75,10 +73,9 @@
     &::after {
       bottom: -1px;
       left: -50px;
-      width: 768px;
+      width: 773px;
       height: 15px;
-      background-size: 768px 15px;
-      background-position-x: 21px;
+      background-image: url("../img/zigzag-line-tablet.png");
     }
   }
 
@@ -142,8 +139,7 @@
       left: 0;
       width: 1050px;
       height: 23px;
-      background-size: 1050px 23px;
-      background-position-x: 24px;
+      background-image: url("../img/zigzag-line-desktop.png");
     }
   }
 
@@ -152,6 +148,12 @@
     width: 527px;
     margin-right: 3px;
     margin-left: 46px;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .week-product__title {
+      margin-right: 22px;
+    }
   }
 
   .week-product__promo {
@@ -171,10 +173,6 @@
 
   .week-product__feature {
     margin-bottom: 106px;
-  }
-
-  .feature-table__cell {
-    padding: 8px 10px 12px 0;
   }
 
   .week-product__price {

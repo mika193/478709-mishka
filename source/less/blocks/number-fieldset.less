@@ -1,6 +1,6 @@
 .number-fieldset {
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 11px;
 }
 
 .number-fieldset__legend {
@@ -53,7 +53,7 @@
 @media (min-width: 768px) {
   .number-fieldset {
     position: relative;
-    padding-top: 53px;
+    padding-top: 56px;
     padding-bottom: 11px;
     background-color: #f1f1f1;
   }
@@ -71,9 +71,17 @@
 
   .number-fieldset__entry-field {
     margin-bottom: 0;
+    padding-bottom: 11px;
     padding-left: 16px;
     font-size: 19px;
+    line-height: 19px;
     background-color: #f1f1f1;
+  }
+
+  @-moz-document url-prefix("") {
+    .number-fieldset__entry-field {
+      padding-bottom: 18px;
+    }
   }
 
   .number-fieldset__svg {
@@ -84,7 +92,7 @@
 
 @media (min-width: 1150px) {
   .number-fieldset {
-    padding-top: 54px;
+    padding-top: 57px;
   }
 
   .number-fieldset__legend {
